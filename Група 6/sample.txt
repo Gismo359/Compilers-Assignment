@@ -59,6 +59,15 @@ function For() {
     }
 }
 
+function While(int a) returns int {
+    int fac = 1;
+    while a > 0 {
+        fac *= a;
+        a -= 1;
+    }
+    return fac;
+}
+
 function Conjunction(bool lhs, bool rhs) returns bool {
     return lhs and rhs;
 }

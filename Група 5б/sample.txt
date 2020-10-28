@@ -1,0 +1,81 @@
+-- Примерен код за домашното. --
+
+A() { }
+
+B: int(i: int) {
+    return i;
+}
+
+Abs: int(i: int) {
+    # if (i < 0) {
+    #     return -1;
+    # } else {
+    #     return i;
+    # }
+
+    return if i < 0 then -i else i;
+}
+
+WithSwitch(a: int) {
+    case (a) {
+        1 {
+            // ...
+        }
+        2 {
+            // ...
+        }
+        3 {
+            // ...
+        }
+        default {
+            // ...
+        }
+    }
+}
+
+WithIfChain(a: int) {
+    if a == 1 then {
+        // ...
+    } else if a == 2 then {
+        // ...
+    } else if a == 3 then {
+        // ...
+    } else {
+        // ...
+    }
+}
+
+Sum: int(array: int[]) {
+    sum: int = 0;
+    for i: int in array do {
+        sum += i;
+    }
+    return sum;
+}
+
+For() {
+    for i: int in [0..10] by 1 {
+        // ...
+    }
+}
+
+While: int(a: int) {
+    fac: int = 1;
+    while a > 0 then {
+        fac *= a;
+        a -= 1;
+    }
+    return fac;
+}
+
+Conjunction: bool(lhs: bool, rhs: bool) {
+    return lhs and rhs;
+}
+
+Disjunction: bool(lhs: bool, rhs: bool) {
+    return lhs or rhs;
+}
+
+ExclusiveDisjunction: bool(lhs: bool, rhs: bool) {
+    return (lhs and not rhs) or (rhs and not lhs);
+}
