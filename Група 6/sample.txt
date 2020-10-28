@@ -1,30 +1,30 @@
 /* Примерен код за домашното. */
 
-function A() { }
+A() { }
 
-function B(int i) returns int {
+B(i: int): int {
     return i;
 }
 
-function Abs(int i) returns int {
-    // if i < 0 {
+Abs(i: int): int {
+    // if (i < 0) {
     //     return -1;
     // } else {
     //     return i;
     // }
 
-    return -i if i < 0 else i;
+    return ;
 }
 
-function WithSwitch(int a) {
-    switch (a) {
-        case 1 {
+WithSwitch(a: int) {
+    case (a) {
+        1 {
             // ...
         }
-        case 2 {
+        2 {
             // ...
         }
-        case 3 {
+        3 {
             // ...
         }
         default {
@@ -33,49 +33,49 @@ function WithSwitch(int a) {
     }
 }
 
-function WithIfChain(int a) {
-    if a == 1 {
+WithIfChain(a: int) {
+    if (a == 1) {
         // ...
-    } elseif a == 2 {
+    } elif (a == 2) {
         // ...
-    } elseif a == 3 {
+    } elif (a == 3) {
         // ...
     } else {
         // ...
     }
 }
 
-function Sum(int[] array) returns int {
-    int sum = 0;
-    for int i in array {
+Sum(array: int[]): int {
+    sum: int = 0;
+    foreach (i: int from array) {
         sum += i;
     }
     return sum;
 }
 
-function For() {
-    for (int i = 0; i < 1; i++) {
+For() {
+    for (i: int = 0; i < 1; i++) {
         // ...
     }
 }
 
-function While(int a) returns int {
-    int fac = 1;
-    while a > 0 {
+While(a: int): int {
+    fac: int = 1;
+    while (a > 0) {
         fac *= a;
         a -= 1;
     }
     return fac;
 }
 
-function Conjunction(bool lhs, bool rhs) returns bool {
-    return lhs and rhs;
+Conjunction(lhs: bool, rhs: bool): bool {
+    return lhs && rhs;
 }
 
-function Disjunction(bool lhs, bool rhs) returns bool {
-    return lhs or rhs;
+Disjunction(lhs: bool, rhs: bool): bool {
+    return lhs || rhs;
 }
 
-function ExclusiveDisjunction(bool lhs, bool rhs) returns bool {
-    return (lhs and not rhs) or (rhs and not lhs);
+ExclusiveDisjunction(lhs: bool, rhs: bool): bool {
+    return (lhs && !rhs) || (rhs && !lhs);
 }

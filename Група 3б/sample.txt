@@ -1,30 +1,30 @@
 /* Примерен код за домашното. */
 
-A() { }
+function A() { }
 
-B(i: int): int {
+function B(int i) returns int {
     return i;
 }
 
-Abs(i: int): int {
-    // if (i < 0) {
+function Abs(int i) returns int {
+    // if i < 0 {
     //     return -1;
     // } else {
     //     return i;
     // }
 
-    return ;
+    return -i if i < 0 else i;
 }
 
-WithSwitch(a: int) {
-    case (a) {
-        1 {
+function WithSwitch(int a) {
+    switch (a) {
+        case 1 {
             // ...
         }
-        2 {
+        case 2 {
             // ...
         }
-        3 {
+        case 3 {
             // ...
         }
         default {
@@ -33,49 +33,49 @@ WithSwitch(a: int) {
     }
 }
 
-WithIfChain(a: int) {
-    if (a == 1) {
+function WithIfChain(int a) {
+    if a == 1 {
         // ...
-    } elif (a == 2) {
+    } elseif a == 2 {
         // ...
-    } elif (a == 3) {
+    } elseif a == 3 {
         // ...
     } else {
         // ...
     }
 }
 
-Sum(array: int[]): int {
-    sum: int = 0;
-    foreach (i: int from array) {
+function Sum(int[] array) returns int {
+    int sum = 0;
+    for int i in array {
         sum += i;
     }
     return sum;
 }
 
-For() {
-    for (i: int = 0; i < 1; i++) {
+function For() {
+    for (int i = 0; i < 1; i++) {
         // ...
     }
 }
 
-While(a: int): int {
-    fac: int = 1;
-    while (a > 0) {
+function While(int a) returns int {
+    int fac = 1;
+    while a > 0 {
         fac *= a;
         a -= 1;
     }
     return fac;
 }
 
-Conjunction(lhs: bool, rhs: bool): bool {
-    return lhs && rhs;
+function Conjunction(bool lhs, bool rhs) returns bool {
+    return lhs and rhs;
 }
 
-Disjunction(lhs: bool, rhs: bool): bool {
-    return lhs || rhs;
+function Disjunction(bool lhs, bool rhs) returns bool {
+    return lhs or rhs;
 }
 
-ExclusiveDisjunction(lhs: bool, rhs: bool): bool {
-    return (lhs && !rhs) || (rhs && !lhs);
+function ExclusiveDisjunction(bool lhs, bool rhs) returns bool {
+    return (lhs and not rhs) or (rhs and not lhs);
 }
