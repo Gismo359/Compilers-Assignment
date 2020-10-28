@@ -1,0 +1,72 @@
+/* Примерен код за домашното. */
+
+A() { }
+
+B(i: int): int {
+    return i;
+}
+
+Abs(i: int): int {
+    // if (i < 0) {
+    //     return -1;
+    // } else {
+    //     return i;
+    // }
+
+    return ;
+}
+
+WithSwitch(int a) {
+    case (a) {
+        1 {
+            // ...
+        }
+        2 {
+            // ...
+        }
+        3 {
+            // ...
+        }
+        default {
+            // ...
+        }
+    }
+}
+
+WithIfChain(a: int) {
+    if (a == 1) {
+        // ...
+    } elif (a == 2) {
+        // ...
+    } elif (a == 3) {
+        // ...
+    } else {
+        // ...
+    }
+}
+
+Sum(array: int[]): int {
+    sum: int = 0;
+    foreach (i: int from array) {
+        sum += i;
+    }
+    return sum;
+}
+
+For() {
+    for (i: int = 0; i < 1; i++) {
+        // ...
+    }
+}
+
+Conjunction(lhs: bool, rhs: bool): bool {
+    return lhs && rhs;
+}
+
+Disjunction(lhs: bool, rhs: bool): bool {
+    return lhs || rhs;
+}
+
+ExclusiveDisjunction(lhs: bool, rhs: bool): bool {
+    return (lhs && !rhs) || (rhs && !lhs);
+}

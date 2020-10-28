@@ -1,0 +1,72 @@
+/* Примерен код за домашното. */
+
+function A() { }
+
+function B(int i) returns int {
+    return i;
+}
+
+function Abs(int i) returns int {
+    // if i < 0 {
+    //     return -1;
+    // } else {
+    //     return i;
+    // }
+
+    return -i if i < 0 else i;
+}
+
+function WithSwitch(int a) {
+    switch (a) {
+        case 1 {
+            // ...
+        }
+        case 2 {
+            // ...
+        }
+        case 3 {
+            // ...
+        }
+        default {
+            // ...
+        }
+    }
+}
+
+function WithIfChain(int a) {
+    if a == 1 {
+        // ...
+    } elseif a == 2 {
+        // ...
+    } elseif a == 3 {
+        // ...
+    } else {
+        // ...
+    }
+}
+
+function Sum(int[] array) returns int {
+    int sum = 0;
+    for int i in array {
+        sum += i;
+    }
+    return sum;
+}
+
+function For() {
+    for (int i = 0; i < 1; i++) {
+        // ...
+    }
+}
+
+function Conjunction(bool lhs, bool rhs) returns bool {
+    return lhs and rhs;
+}
+
+function Disjunction(bool lhs, bool rhs) returns bool {
+    return lhs or rhs;
+}
+
+function ExclusiveDisjunction(bool lhs, bool rhs) returns bool {
+    return (lhs and not rhs) or (rhs and not lhs);
+}
